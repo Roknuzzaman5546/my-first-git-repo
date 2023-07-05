@@ -56,6 +56,9 @@
       border-right: 1px solid black;
       margin: -3px;
 } 
+.menu ul li:first-child{
+    border-left: 1px solid black;
+}
 .menu ul li a{
     padding: 17.5px 57px;
     display: inline-block;
@@ -66,6 +69,34 @@
 .menu ul li a:hover{
     background: rgb(65, 65, 124);
 }
+ /* Drop down manu */
+ .menu ul li{
+    position: relative;
+ }
+ .menu ul li ul{
+    position: absolute;
+    top: 100%;
+    left:0;
+    width: 100% ; 
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    transform: scale(0);
+ }
+ .menu ul li ul li{
+    display: block;
+    margin-left: -4px;
+ }
+ .menu ul li ul li a{
+    display: block;
+    border: 1px solid black;
+    background: blueviolet;
+ }
+ .menu ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleX(1);
+ }
 /* banner */
 .bg{
     background-image: url(./sojib.jpg);
@@ -109,6 +140,7 @@
     font-size: 25px;
     border-radius: 20px 0 20px 0;
     margin-bottom: 20px;
+    text-align: center;
 }
 .skill span:hover{
     background: rgb(36, 0, 70);
